@@ -20,7 +20,15 @@ public class CharacterTriggersController : MonoBehaviour
 
     public int level=1;
 
+#if UNITY_IOS
+    private string gameId="4127348";
+    private string appId="ca-app-pub-4962234576866611~5838634512";
+    private string intersitionalId="ca-app-pub-4962234576866611/4605443891";
+#else
     private string gameId="4127349";
+    private string appId="ca-app-pub-4962234576866611~2637966894";
+    private string intersitionalId="ca-app-pub-4962234576866611/8842925350";
+#endif
 
     public Text gemsCnt;
 
@@ -170,8 +178,6 @@ public class CharacterTriggersController : MonoBehaviour
 
 
     private InterstitialAd intersitional;
-    private string appId="ca-app-pub-4962234576866611~2637966894";
-    private string intersitionalId="ca-app-pub-4962234576866611/8842925350";
 
      AdRequest AdRequestBuild(){
          return new AdRequest.Builder().Build();
