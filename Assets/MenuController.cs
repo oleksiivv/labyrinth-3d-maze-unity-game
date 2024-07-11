@@ -98,12 +98,9 @@ public class MenuController : MonoBehaviour
         int totalStarsCnt=totalStarsNumberJun+totalStarsNumberMid+totalStarsNumberPro;
         totalStars.GetComponent<Text>().text="Total collected: "+(totalStarsCnt).ToString()+"/"+(54*3).ToString();
 
-        if(totalStarsCnt>=36){
-            midReqPanel.SetActive(false);
-        }
-        if(totalStarsCnt>=87){
-            proReqPanel.SetActive(false);
-        }
+        midReqPanel.SetActive(false);
+        
+        proReqPanel.SetActive(false);
     }
 
 

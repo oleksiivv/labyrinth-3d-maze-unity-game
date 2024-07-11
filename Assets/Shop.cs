@@ -19,7 +19,7 @@ public class Shop : MonoBehaviour
     
 
     void Start(){
-        PlayerPrefs.SetInt("gems", PlayerPrefs.GetInt("gems")+10000);
+        //PlayerPrefs.SetInt("gems", PlayerPrefs.GetInt("gems")+10000);
         for(int i=0;i<prices.Length;i++){
             pricesText[i].GetComponent<Text>().text=prices[i].ToString();
         }

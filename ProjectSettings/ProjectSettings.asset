@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: Eazy Street
+  companyName: Vertex Studio
   productName: Labyrinth 3D Maze
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -43,8 +43,6 @@ PlayerSettings:
   - logo: {fileID: 10404, guid: 0000000000000000e000000000000000, type: 0}
     duration: 2
   - logo: {fileID: 21300000, guid: 2f5561baf77253f4b8c6fb63fe36c603, type: 3}
-    duration: 2
-  - logo: {fileID: 21300000, guid: 9cc95ac4f05e4ab46a78e02f752decbe, type: 3}
     duration: 2
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
@@ -140,7 +138,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.3.5
+  bundleVersion: 0.0.8
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -160,9 +158,10 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.EazyStreet.LabyrinthAdventuresFree
+    iPhone: com.VertexStudio.Labyrinth3DMaze
   buildNumber:
     Standalone: 0
-    iPhone: 0
+    iPhone: 8
     tvOS: 0
   overrideDefaultApplicationIdentifier: 1
   AndroidBundleVersionCode: 21
@@ -276,7 +275,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 12fe58851c486e049bb90eb10e24fe4c, type: 3}
+      m_Icon: {fileID: 2800000, guid: 2c32764c3ce6527418c2245d6ae934a5, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
