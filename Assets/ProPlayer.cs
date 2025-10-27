@@ -15,7 +15,7 @@ public class ProPlayer : MonoBehaviour
     void OnCollisionEnter(Collision other){
         collisionsNear++;
         if(collisionsNear==0 /*&& character.rigidbody.velocity.y==0*/){
-            character.rigidbody.velocity=Vector3.down*100;
+            character.rigidbody.linearVelocity=Vector3.down*100;
             Invoke(nameof(showDiePanel),1f);
             StopAllCoroutines();
         }
@@ -27,7 +27,7 @@ public class ProPlayer : MonoBehaviour
     void OnCollisionExit(Collision other){
         collisionsNear--;
         if(collisionsNear==0 /*&& character.rigidbody.velocity.y==0*/){
-            character.rigidbody.velocity=Vector3.down*100;
+            character.rigidbody.linearVelocity=Vector3.down*100;
             Invoke(nameof(showDiePanel),1f);
             StopAllCoroutines();
         }

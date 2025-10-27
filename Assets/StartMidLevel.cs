@@ -61,14 +61,14 @@ public class StartMidLevel : MonoBehaviour
        if(player.winPanel.activeSelf){
            StopAllCoroutines();
            timerText.gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>().enabled=false;
-           player.GetComponent<Rigidbody>().velocity=Vector3.zero;
+           player.GetComponent<Rigidbody>().linearVelocity=Vector3.zero;
 
            timerText.GetComponent<Animator>().SetBool("win",true);
 
            winText.GetComponent<Text>().text="Level "+(player.level+1).ToString()+" completed!\n"+(AllTime-timer).ToString()+" seconds spent";
         }
         if(player.diePanel.activeSelf){
-            player.GetComponent<Rigidbody>().velocity=Vector3.zero;
+            player.GetComponent<Rigidbody>().linearVelocity=Vector3.zero;
             player.diePanel.SetActive(true);
             StopAllCoroutines();
             timerText.gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>().enabled=false;
@@ -83,7 +83,7 @@ public class StartMidLevel : MonoBehaviour
             timerText.GetComponent<Text>().text=timer.ToString();
 
             if(timer==0){
-                player.GetComponent<Rigidbody>().velocity=Vector3.zero;
+                player.GetComponent<Rigidbody>().linearVelocity=Vector3.zero;
                 player.diePanel.SetActive(true);
                 StopAllCoroutines();
                 timerText.gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>().enabled=false;

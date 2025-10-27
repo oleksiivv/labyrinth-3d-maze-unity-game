@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Advertisements;
 using GoogleMobileAds.Api;
 using System;
 
@@ -43,9 +42,7 @@ public class CharacterTriggersController : MonoBehaviour
             LoadLoadInterstitialAd();
         });
         
-
-
-        Advertisement.Initialize(gameId,false);
+        // Advertisement.Initialize(gameId,false);
         collider=GetComponent<SphereCollider>();
         rigidbody=GetComponent<Rigidbody>();
         character=GetComponent<CharacterMoveController>();
@@ -62,7 +59,7 @@ public class CharacterTriggersController : MonoBehaviour
             if(other.gameObject.tag=="hole"){
                 //rigidbody.isKinematic=true;
                 //Destroy(rigidbody);
-                rigidbody.velocity = Vector3.zero;
+                rigidbody.linearVelocity = Vector3.zero;
                 rigidbody.angularVelocity = Vector3.zero; 
                 character.movable=0;
                 gameObject.transform.position=new Vector3(other.gameObject.transform.position.x,gameObject.transform.position.y, other.gameObject.transform.position.z);
@@ -79,7 +76,7 @@ public class CharacterTriggersController : MonoBehaviour
                 else if(level<36)PlayerPrefs.SetInt("MidLevel"+(level+1-18).ToString(),1);
                 else PlayerPrefs.SetInt("ProLevel"+(level+1-36).ToString(),1);
 
-                rigidbody.velocity=Vector3.zero;
+                rigidbody.linearVelocity=Vector3.zero;
                 StopAllCoroutines();
 
             }
@@ -104,7 +101,7 @@ public class CharacterTriggersController : MonoBehaviour
                     Invoke(nameof(showDiePanel),1.2f);
                     StopAllCoroutines();
 
-                    rigidbody.velocity = Vector3.zero;
+                    rigidbody.linearVelocity = Vector3.zero;
                     rigidbody.angularVelocity = Vector3.zero; 
                     rigidbody.useGravity=false;
                     //Destroy(rigidbody);
@@ -140,7 +137,7 @@ public class CharacterTriggersController : MonoBehaviour
                     Invoke(nameof(showDiePanel),1.2f);
                     StopAllCoroutines();
 
-                    rigidbody.velocity = Vector3.zero;
+                    rigidbody.linearVelocity = Vector3.zero;
                     rigidbody.angularVelocity = Vector3.zero; 
                     rigidbody.useGravity=false;
                     //Destroy(rigidbody);
